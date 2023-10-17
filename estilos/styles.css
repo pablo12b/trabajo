@@ -1,0 +1,311 @@
+:root{
+    --primario: #84b3ca;
+    --primarioObscuro: #d6d2bd;
+    --secundario: #000;
+    --secundarioObscuro: rgb(233,287,2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /*GLOBALES*/
+  body{
+      background-color: var(--primario);
+      font-size: 1.6rem;
+      line-height: 1.5;
+  }
+  p{
+      font-size: 1.8rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--blanco);
+  }
+  a{
+      text-decoration: none;
+  }
+  img{
+      width: 100%;
+  }
+  .contenedor{
+      max-width: 120rem;
+      margin: 0 auto;
+  }
+  h1,h2,h3{
+      text-align: center;
+      color: var(--secundario);
+      font-family: var(--fuentePrincipal);
+  }
+  h1{
+      font-size: 4rem;
+  }
+  h2{
+      font-size: 3.2rem;
+  }
+  h3{
+      font-size: 2.4rem;
+  }
+
+  /*HEADER*/
+  .header{
+      display: flex;
+      justify-content: center;
+  }
+  .header__logo{
+      margin: 3rem 0;
+  }
+  /*NAVEGACION*/
+  .navegacion{
+      background-color: var(--primarioObscuro);
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem; /*Forma nueva de separar*/
+  }
+  .navegacion__enlace{
+      font-family: var(--fuentePrincipal);
+      color: var(--blanco);
+      font-size: 3rem;
+  }
+  .navegacion__enlace--activo,
+  .navegacion__enlace:hover{
+      color: var(--secundario);
+  }
+
+  /*GRID*/
+  .grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+  @media (min-width: 768px){
+      .grid{
+    grid-template-columns: repeat(3, 1fr);
+      }
+  }
+  
+  /*PRODUCTO*/
+  .producto{
+    background-color:var(--primarioObscuro);
+    padding: 1rem;
+  }
+ /* .producto__informacion{
+
+  }*/
+  .producto__nombre{
+    font-size: 4rem;
+  }
+  .producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+  }
+  .producto__nombre,
+  .producto__precio{
+      font-family: var(--fuentePrincipal);
+      margin: 1rem 0;
+      text-align: center;
+      line-height: 1.2;
+  }
+  /*GRAFICOS*/
+  .grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: auto cover;
+    grid-column: 1/3;
+}
+ .grafico--camisas{
+     grid-row: 2 /3;
+     background-image: url(../img/farmacia.png);
+ }
+ .grafico--node{
+    background-image: url(../img/farmacia.png);
+    padding: 2rem;
+    grid-row: 2 /3;
+ }
+ @media (min-width: 768px){
+    .grafico--node{
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }         
+ }
+
+ /*NOSOTROS*/
+ .nosotros{
+    display:grid;
+    grid-template-rows: repeat(2,auto);
+ }
+ @media (min-width: 768px){
+    .nosotros{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    } 
+ }
+.nosotros__imagen{
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+/*BLOQUES*/
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+
+/*Pagina del Producto*/
+@media (min-width: 768px){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.formulario__campo{
+    border-color:var(--primarioObscuro);
+    border-width:1rem;
+    border-style: solid;
+    background-color: transparent;
+    color:var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:1rem;
+    appearance:none;
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding:2rem;
+    transition:background-color .3s ease;
+    transition:font-size .3s ease;
+    grid-column: 1/3;
+}
+.formulario__submit:hover{
+    font-size: 2.4rem;
+    cursor:pointer;
+    background-color: var(--secundarioObscuro);
+}
+
+  /*FOOTER*/
+  .footer{
+      background-color: var(--primarioObscuro);
+      padding: 1rem 0;
+      margin: 2rem;
+  }
+  .footer__texto{
+      font-family: var(--fuentePrincipal);
+      text-align: center;
+      font-size: 2.2rem;
+  }
+
+  /*barra de menu*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #595B58;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-tab {
+  height: 150px;
+  width: 600px;
+  background-color: #fff;
+  box-shadow: 0 50px 30px 0 rgba(#000, 0.175);
+  border-radius: 20px 20px 90px 90px;
+  overflow: hidden;
+  border: 15px solid #fff;
+  display: flex;
+  position: relative;
+  flex-shrink:0;
+}
+
+.navigation-tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+
+}
+    .navigation-tab-item-active {
+      width: 210px;
+    }
+      .navigation-tab__icon {
+        transform: translate(0px, -10px);
+      }
+      .navigation-tab__txt {
+        opacity: 1;
+        transform: translate(0, 10px);
+      }
+    
+
+  .navigation-tab-overlay {
+    border-radius: 20px;
+    background-color: #e4f2ff;
+    height: 100%;
+    width: 210px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+  }
+
+  .navigation-tab__icon {
+    display: block;
+    color: #4298e7;
+    transition-duration: 0.3s;
+    line-height: 1;
+    transform: translate(0, 11px);
+  }
+
+  .navigation-tab__txt {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4298e7;
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transform: translate(0, 20px);
+    user-select: none;
+  }
+
