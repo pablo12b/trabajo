@@ -1,0 +1,77 @@
+/* Reset some default styles for the body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header and navigation menu */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    align-items: center;
+}
+
+.menu-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style the search form and input */
+#searchForm {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style the recipe title */
+.recipe-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* Style the recipe container */
+.recipe-container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
