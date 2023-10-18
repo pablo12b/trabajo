@@ -1,11 +1,14 @@
-<html>
-    <head>
-        <title>Página Web de Recetas Culinarias</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/meni.css">
-    </head>
-    <header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web de Recetas Culinarias</title>
+    <link rel="stylesheet" href="css/meni.css">
+    <link rel="stylesheet" href="css/buscar.css"> <!-- Add this line to include "buscar.css" -->
+</head>
+<body>
+    <header class="header">
         <div class="container">
             <div class="menu">
                 <a href="inicio.html" class="barra">Inicio</a>
@@ -17,19 +20,15 @@
             </div>
         </div>
     </header>
-    <body>
-        <form action="" method="post">
-            <input type="text" class="estilo-input" name = "pro_nombre" placeholder="Ingresar receta">
-            <button type="text" class="estilo-button" name = "buscar" type="submit">Buscar</button>
-        </form>
-        <p class="Titulo">Recetas</p>
-        <p class="texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard 
-            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has 
-            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised 
-            in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-            like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </body>
-    <footer class="footer">
-        <p class="footer__texto">Realizado: Pablo Bravo y Daniel Yanza</p>
-    </footer>
+    <form id="searchForm">
+        <input type="text" class="estilo-input" name="pro_nombre" id="searchInput" placeholder="Buscar receta por nombre">
+        <button type="submit" class="estilo-button">Buscar</button>
+    </form>
+    <p class="Titulo">Recetas</p>
+    <div class="recipe-container">
+        <!-- Recipes found will be displayed here -->
+    </div>
+    
+    <script src="JavaScript/buscar.js"></script>
+</body>
 </html>
