@@ -1,32 +1,37 @@
-// Load recipes from localStorage or initialize an empty array
-const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+document.addEventListener('DOMContentLoaded', function () {
+    const recetas = JSON.parse(localStorage.getItem('recipes')) || [];
 
-// Function to display search results
-function showResults(query) {
-    const results = document.getElementById("results");
-    results.innerHTML = ""; // Clear previous results
+    document.getElementById('searchForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        let found = false; // Initialize found as false
+        const nombreReceta = document.getElementById('searchInput').value;
 
-    for (const recipe of recipes) {
-        if (recipe.name.toLowerCase().includes(query.toLowerCase())) {
-            const item = document.createElement("li");
-            item.textContent = recipe.name;
-            item.addEventListener("click", () => showRecipeDetails(recipe));
-            results.appendChild(item);
+        if (nombreReceta != null) {
+            for (const recipe of recetas) {
+                if (nombreReceta === recipe.nombreReceta) {
+                    showRecipeDetails(recipe);
+                    found = true;
+                    break;
+                }
+            }
         }
-    }
-}
+        if (!found) {
+            console.log('No hay receta registrada');
+        } else {
+            console.log('Encontrado');
+        }
+    });
+});
 
 // Function to display recipe details
 function showRecipeDetails(recipe) {
-    const details = document.getElementById("recipe-details");
+    const details = document.getElementById('recipe-details');
     details.innerHTML = `
-        <h2>${recipe.name}</h2>
-        <p>${recipe.description}</p>
-        <p><strong>Ingredients:</strong> ${recipe.ingredients}</p>
+        <h2>${recipe.nombreReceta}</h2>
+        <img src="${recipe.imagen}" alt="${recipe.nombreReceta}" id="recipe-image">
+        <p><strong>Ingredients:</strong> ${recipe.ingredientes}</p>
+        <p>${recipe.pasos}</p>
     `;
 }
 
-// Add event listener for the search input
-document.getElementById("searchInput").addEventListener("input", function () {
-    showResults(this.value);
-});

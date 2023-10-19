@@ -1,5 +1,5 @@
 /* Reset some default styles for the body */
-body {
+.body-reset {
     margin: 0;
     padding: 0;
 }
@@ -73,7 +73,17 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+ul {
+    text-align: center;
+}
 
+/* Style the image */
+#recipe-image {
+    display: block; /* Ensure the image is a block element for centering */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    margin-bottom: 20px; /* Add margin to separate the image from the ul */
+}
 
 
 

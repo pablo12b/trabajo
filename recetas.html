@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>Página Web de Recetas Culinarias</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web de Recetas Culinarias</title>
     <link rel="stylesheet" href="css/meni.css">
-    <link rel="stylesheet" href="css/buscar.css"> <!-- Add this line to include "buscar.css" -->
+    <link rel="stylesheet" href="css/buscar.css">
+    <script src="JavaScript/buscarReceta.js"></script>
 </head>
 <body>
     <header class="header">
@@ -21,14 +22,12 @@
         </div>
     </header>
     <form id="searchForm">
-        <input type="text" class="estilo-input" name="pro_nombre" id="searchInput" placeholder="Buscar receta por nombre">
-        <button type="submit" class="estilo-button">Buscar</button>
+        <input type="text" class="search-input" name="searchInput" id="searchInput" placeholder="Buscar receta por nombre">
+        <button type="submit" class="search-button" id="buscarButton">Enviar Receta</button>
+
     </form>
-    <p class="Titulo">Recetas</p>
-    <div class="recipe-container">
-        <!-- Recipes found will be displayed here -->
-    </div>
-    
-    <script src="JavaScript/buscar.js"></script>
+    <p class="recipe-title">Recetas</p>
+    <ul id="results"></ul>
+    <div id="recipe-details"></div>
 </body>
 </html>
